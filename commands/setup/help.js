@@ -12,6 +12,7 @@ module.exports = {
 		.setTitle(`Help`)
         .setDescription('Factions bot by Beastmasterrr')
         .addFields(
+            {name: 'Setup', value: `Do \`${options.discord_options.prefix}setup\` to create the required channels`},
             {name: 'Set', value: `Do \`${options.discord_options.prefix}set\` to assign various options for the bot`},
             {name: 'Database', value: `Do \`${options.discord_options.prefix}db\` to check database related commands`},
             { name: 'Discord Commands', value: 'Press 🖥️ for list of Discord Commands' },
