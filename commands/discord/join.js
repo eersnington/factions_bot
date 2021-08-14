@@ -313,7 +313,7 @@ function main(options, message, client, db) {
       
       if (options.tnt_alert == true && !tnt_cooldown.has("cooldown")){
         tnt_cooldown.add("cooldown");
-        setTimeout(()=> tnt_cooldown.delete("cooldown"), 2750);
+        setTimeout(()=> tnt_cooldown.delete("cooldown"), 6000);
         if (data.radius == 4){
 
           const tntEmbed = new Discord.MessageEmbed();
@@ -333,7 +333,7 @@ function main(options, message, client, db) {
       if(options.cegg_alert == true && !cegg_cooldown.has("cooldown")){
 
         cegg_cooldown.add("cooldown");
-        setTimeout(()=> cegg_cooldown.delete("cooldown"), 1000);
+        setTimeout(()=> cegg_cooldown.delete("cooldown"), 6000);
 
         if (data.radius != 4) {
           const ceggEmbed = new Discord.MessageEmbed();
