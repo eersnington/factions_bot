@@ -42,7 +42,6 @@ module.exports = {
           const fileName = file.substring(0, file.length-3);
           options.commands[fileName] = command;
         }
-        relog_interval = options.minecraft_options.relog_interval;
         
         main(options, message, client, db);
           
@@ -63,7 +62,7 @@ module.exports = {
  */
 
 function main(options, message, client, db) {
-  clearTimeout(relog_interval);
+  
   login_timeout = setTimeout(()=> {
     let channel = client.channels.cache.get(options.discord_options.server_chat_channel);
     options.minecraft_options.bot = null
@@ -135,6 +134,7 @@ function main(options, message, client, db) {
         bot.chat(`/login ${options.config.cracked_password}`)
       }
       clearTimeout(login_timeout);
+      clearTimeout(relog_interval);
       
       setTimeout(()=>bot.chat(`/${options.minecraft_options.join_command}`), 1000)
       console.log(chalk.green(`[Glowstone] Logged in as`, chalk.bold.underline(`${bot.username}`),`in`,chalk.bold.underline(`${options.minecraft_options.ip}`)));
@@ -218,8 +218,8 @@ function main(options, message, client, db) {
     bot.on("kicked", async (reason) => {
       let channel = client.channels.cache.get(options.discord_options.server_chat_channel)
 
-      setTimeout(() => {
-        relog_interval = main(options, message, client);
+      relog_interval = setTimeout(() => {
+        main(options, message, client);
       }, 120000);
       if (!channel) {
         bot.end();

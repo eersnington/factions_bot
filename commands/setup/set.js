@@ -7,7 +7,7 @@ module.exports = {
     description : 'Set Bot settings and channel settings',
     execute(client, message, args, db, fetch_data, options){
         set_page_no = 0;
-        db.ref(options.config.glowstone_token).child('botInfo')
+        
         let prefix = options.discord_options.prefix;
         let minecraft_options = Object.keys(options.minecraft_options);
         let discord_options = Object.keys(options.discord_options);

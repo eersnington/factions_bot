@@ -32,7 +32,7 @@ const options = {
   //mineflayer variables
   online: false,
   config: {mc_username: config.username, mc_password: config.password, cracked_password: config.cracked_password, auth: config.microsoft_or_mojang, glowstone_token: config.glowstone_token}, 
-  minecraft_options:{bot: null, version: '1.8.9', ip: null, join_command: null, relog_interval: null},
+  minecraft_options:{bot: null, version: '1.8.9', ip: null, join_command: null},
   //discord bot variables
   discord_options: {prefix: '*', developer_role: config.developer_role_id, member_role: null, server_chat_channel: null, weewoo_channel: null, buffer_channel: null,
   ftop_channel: null, fptop_channel: null, flist_channel: null, alerts_channel: null, whitelist_channel: null, logs_channel: null, interval: 5},
