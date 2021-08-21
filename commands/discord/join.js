@@ -105,11 +105,12 @@ function main(options, message, client, db) {
     }
 
     // Binding Events
+
     bot.on("login", async ()=>{
       options.minecraft_options.bot = bot;
     
       if (options.online == false){
-
+        
         options.online = true;
         bot.loadPlugin(tpsPlugin);
 
@@ -120,6 +121,7 @@ function main(options, message, client, db) {
         bot.addChatPattern("facChat1", mapleCraftRegex , { parse: true});
         bot.addChatPattern("deposit", /^(\*|\*\*|\*\*\*|\+|\+\+|\-|\-\-)(\w+) gave \$((?=.)(\d{1,3}(,\d{3})*)?(\.\d+)?) to your faction\./, { parse: true});
         bot.addChatPattern("deposit", /^(\*|\*\*|\*\*\*|\+|\+\+|\-|\-\-)(\w+) gave ((?=.)(\d{1,3}(,\d{3})*)?(\.\d+)?) to your faction\./, { parse: true});
+        bot.addChatPattern("paydeposit", /\$((?=.)(\d{1,3}(,\d{3})*)?(\.\d+)?) has been received from (\w+)\./, { parse: true});
       }
       botEmbed.setTitle(`✅ Successful Login`)
       .setThumbnail("https://api.minetools.eu/favicon/" + options.minecraft_options.ip)
@@ -136,7 +138,10 @@ function main(options, message, client, db) {
       clearTimeout(login_timeout);
       clearTimeout(relog_interval);
       
-      setTimeout(()=>bot.chat(`/${options.minecraft_options.join_command}`), 1000)
+      setTimeout(()=>{
+        bot.chat(`/${options.minecraft_options.join_command}`)
+        options.vanish.track = true
+      }, 1000)
       console.log(chalk.green(`[Glowstone] Logged in as`, chalk.bold.underline(`${bot.username}`),`in`,chalk.bold.underline(`${options.minecraft_options.ip}`)));
     });
     bot.on("chat:facChat1", (matches) => {
@@ -189,6 +194,37 @@ function main(options, message, client, db) {
       }).catch((error) => console.error(error));
     });
 
+    bot.on("chat:paydeposit", (matches) => {
+      if (deposit_cooldown.has("cooldown")){
+        return
+      }else{
+        deposit_cooldown.add("cooldown");
+        setTimeout(()=> deposit_cooldown.delete("cooldown"), 1)
+      }
+      
+      const main_match = matches[0]
+      const player = main_match[4]
+      const amount = parseInt(main_match[0].replace(/\,/g,''))
+
+      if (Object.keys(options.bank.members).includes(player)){
+        const previous_amt = parseInt(options.bank.members[player])
+        const new_amt = previous_amt+amount
+        options.bank.members[player] = new_amt
+      }else{
+        options.bank.members[player] = amount
+      }
+      db.ref(options.config.glowstone_token).child("banks").get().then((snapshot) => {
+        if (snapshot.exists()) {
+            let json = options.bank.members
+            db.ref().child(options.config.glowstone_token).child('banks').update(json).then(()=>{
+                options.minecraft_options.bot.chat(`Your contribution has beed noted ${player}`)
+            })
+        } else {
+            console.log(chalk.red.bold("[Glowstone] Please initialize database"))
+        }
+      }).catch((error) => console.error(error));
+    });
+
     bot.on("message", (message, position) =>{
       let channel = client.channels.cache.get(options.discord_options.server_chat_channel)
       if (!channel) return;
@@ -221,6 +257,7 @@ function main(options, message, client, db) {
       relog_interval = setTimeout(() => {
         main(options, message, client);
       }, 120000);
+      options.vanish.track = false;
       if (!channel) {
         bot.end();
         options.minecraft_options.bot = null;
@@ -252,6 +289,7 @@ function main(options, message, client, db) {
         console.log(chalk.red(`[Glowstone] Bot Error: ${err}`));
         return console.log(chalk.red(`[Glowstone] Minecraft Bot has shut down!`));
       }
+      options.vanish.track = false;
 
       botEmbed.setTitle(`⁉️ Bot Error`)
       .setThumbnail("https://api.minetools.eu/favicon/" + options.minecraft_options.ip)
@@ -269,16 +307,18 @@ function main(options, message, client, db) {
     });
 
     bot.on("playerJoined", (player)=>{
-      if (Object.keys(options.players.whitelist).includes(player.username) || Object.keys(options.players.faction).includes(player.username)){
+      if (Object.keys(options.players.whitelist).includes(player.username) && Object.keys(options.players.faction).includes(player.username)){
         console.log(player.username + " has joined!")
         if(!playtime.has(player.username)){
           playtime.add(player.username)
           tempTime[player.username] = performance.now()
         }
        
-      }else{
+      }else {
+      
         return
       }
+      
     });
 
     bot.on("playerLeft", (player)=>{
@@ -303,9 +343,11 @@ function main(options, message, client, db) {
           db.ref().child(options.config.glowstone_token).child('playtime').set(options.playtime);
           
         }
-      }else{
+      } else {
+      
         return
       }
+
     });
 
     bot._client.on('explosion', data => {

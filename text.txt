@@ -1,0 +1,504 @@
+{
+  action: 2,
+  data: [
+    {
+      UUID: 'ce3f47cc-a619-4229-93b4-6ee86bf39282',
+      name: undefined,
+      properties: undefined,
+      gamemode: undefined,
+      ping: 61,
+      displayName: undefined
+    },
+    {
+      UUID: '92a1e99d-c432-4b7f-987d-10cbbf28e735',
+      name: undefined,
+      properties: undefined,
+      gamemode: undefined,
+      ping: 30,
+      displayName: undefined
+    },
+    {
+      UUID: 'f91a4ee6-e3eb-4e9e-afce-686d23108c20',
+      name: undefined,
+      properties: undefined,
+      gamemode: undefined,
+      ping: 103,
+      displayName: undefined
+    },
+    {
+      UUID: 'db2f75ad-5682-4252-b463-aded84882b84',
+      name: undefined,
+      properties: undefined,
+      gamemode: undefined,
+      ping: 57,
+      displayName: undefined
+    },
+    {
+      UUID: '14ccf80e-071b-4711-b1f0-3da19095140d',
+      name: undefined,
+      properties: undefined,
+      gamemode: undefined,
+      ping: 163,
+      displayName: undefined
+    },
+    {
+      UUID: 'f31a22b1-4f10-4c17-813c-ac68aa2928de',
+      name: undefined,
+      properties: undefined,
+      gamemode: undefined,
+      ping: 21,
+      displayName: undefined
+    },
+    {
+      UUID: '74e9e757-bf6d-4a23-8f2f-302c700035eb',
+      name: undefined,
+      properties: undefined,
+      gamemode: undefined,
+      ping: 73,
+      displayName: undefined
+    },
+    {
+      UUID: '146fb5cf-f313-4610-b36d-a08468132e6a',
+      name: undefined,
+      properties: undefined,
+      gamemode: undefined,
+      ping: 102,
+      displayName: undefined
+    },
+    {
+      UUID: 'e8fb6108-48d6-4dc9-a942-df99e82de343',
+      name: undefined,
+      properties: undefined,
+      gamemode: undefined,
+      ping: 93,
+      displayName: undefined
+    },
+    {
+      UUID: '5836a036-8710-4043-9f9d-a97c7dce1a11',
+      name: undefined,
+      properties: undefined,
+      gamemode: undefined,
+      ping: 38,
+      displayName: undefined
+    },
+    {
+      UUID: '140549f8-b533-429a-96eb-6d91ad129199',
+      name: undefined,
+      properties: undefined,
+      gamemode: undefined,
+      ping: 69,
+      displayName: undefined
+    },
+    {
+      UUID: '3e868a07-43c6-4ca2-986c-f6ec703b5fc4',
+      name: undefined,
+      properties: undefined,
+      gamemode: undefined,
+      ping: 121,
+      displayName: undefined
+    },
+    {
+      UUID: 'e92383aa-d13a-4f2d-9074-9fad6a7f16e8',
+      name: undefined,
+      properties: undefined,
+      gamemode: undefined,
+      ping: 37,
+      displayName: undefined
+    },
+    {
+      UUID: '793e9da0-ec06-46aa-a416-e7d9a177a2eb',
+      name: undefined,
+      properties: undefined,
+      gamemode: undefined,
+      ping: 31,
+      displayName: undefined
+    },
+    {
+      UUID: '495aa422-0255-410a-bf25-b6233c674778',
+      name: undefined,
+      properties: undefined,
+      gamemode: undefined,
+      ping: 109,
+      displayName: undefined
+    },
+    {
+      UUID: 'a9dce529-6b1f-43f8-bd4a-e02d6082693d',
+      name: undefined,
+      properties: undefined,
+      gamemode: undefined,
+      ping: 213,
+      displayName: undefined
+    },
+    {
+      UUID: 'c1e92756-5936-4fbe-b9dd-3093930eda94',
+      name: undefined,
+      properties: undefined,
+      gamemode: undefined,
+      ping: 210,
+      displayName: undefined
+    },
+    {
+      UUID: 'de9e144c-83fa-48c4-a355-16f5b1f785ea',
+      name: undefined,
+      properties: undefined,
+      gamemode: undefined,
+      ping: 115,
+      displayName: undefined
+    },
+    {
+      UUID: '3be3788d-8015-4248-84b9-7a87f7594ae7',
+      name: undefined,
+      properties: undefined,
+      gamemode: undefined,
+      ping: 149,
+      displayName: undefined
+    },
+    {
+      UUID: '7f848f60-553d-4fdd-b7b9-795071ce133f',
+      name: undefined,
+      properties: undefined,
+      gamemode: undefined,
+      ping: 227,
+      displayName: undefined
+    },
+    {
+      UUID: '524b6ecf-0bfc-4efa-a319-46f3a4816ed8',
+      name: undefined,
+      properties: undefined,
+      gamemode: undefined,
+      ping: 48,
+      displayName: undefined
+    },
+    {
+      UUID: 'c2a5ac53-f540-4751-855a-141c9c549e16',
+      name: undefined,
+      properties: undefined,
+      gamemode: undefined,
+      ping: 25,
+      displayName: undefined
+    },
+    {
+      UUID: '3367b018-5e58-4117-90b0-defbea7b3338',
+      name: undefined,
+      properties: undefined,
+      gamemode: undefined,
+      ping: 112,
+      displayName: undefined
+    },
+    {
+      UUID: '99580cf6-a86d-4491-aa0d-744444bb01ea',
+      name: undefined,
+      properties: undefined,
+      gamemode: undefined,
+      ping: 239,
+      displayName: undefined
+    },
+    {
+      UUID: 'e46739a1-aab1-462d-b567-56cf46cfc4af',
+      name: undefined,
+      properties: undefined,
+      gamemode: undefined,
+      ping: 173,
+      displayName: undefined
+    },
+    {
+      UUID: '5c42fa50-b6fc-4055-b6b4-96547cc4f1f6',
+      name: undefined,
+      properties: undefined,
+      gamemode: undefined,
+      ping: 109,
+      displayName: undefined
+    }
+  ]
+}
+{
+  action: 2,
+  data: [
+    {
+      UUID: 'ce3f47cc-a619-4229-93b4-6ee86bf39282',
+      name: undefined,
+      properties: undefined,
+      gamemode: undefined,
+      ping: 61,
+      displayName: undefined
+    },
+    {
+      UUID: '92a1e99d-c432-4b7f-987d-10cbbf28e735',
+      name: undefined,
+      properties: undefined,
+      gamemode: undefined,
+      ping: 30,
+      displayName: undefined
+    },
+    {
+      UUID: 'f91a4ee6-e3eb-4e9e-afce-686d23108c20',
+      name: undefined,
+      properties: undefined,
+      gamemode: undefined,
+      ping: 103,
+      displayName: undefined
+    },
+    {
+      UUID: 'db2f75ad-5682-4252-b463-aded84882b84',
+      name: undefined,
+      properties: undefined,
+      gamemode: undefined,
+      ping: 57,
+      displayName: undefined
+    },
+    {
+      UUID: '14ccf80e-071b-4711-b1f0-3da19095140d',
+      name: undefined,
+      properties: undefined,
+      gamemode: undefined,
+      ping: 163,
+      displayName: undefined
+    },
+    {
+      UUID: 'f31a22b1-4f10-4c17-813c-ac68aa2928de',
+      name: undefined,
+      properties: undefined,
+      gamemode: undefined,
+      ping: 21,
+      displayName: undefined
+    },
+    {
+      UUID: '74e9e757-bf6d-4a23-8f2f-302c700035eb',
+      name: undefined,
+      properties: undefined,
+      gamemode: undefined,
+      ping: 73,
+      displayName: undefined
+    },
+    {
+      UUID: '146fb5cf-f313-4610-b36d-a08468132e6a',
+      name: undefined,
+      properties: undefined,
+      gamemode: undefined,
+      ping: 102,
+      displayName: undefined
+    },
+    {
+      UUID: 'e8fb6108-48d6-4dc9-a942-df99e82de343',
+      name: undefined,
+      properties: undefined,
+      gamemode: undefined,
+      ping: 93,
+      displayName: undefined
+    },
+    {
+      UUID: '5836a036-8710-4043-9f9d-a97c7dce1a11',
+      name: undefined,
+      properties: undefined,
+      gamemode: undefined,
+      ping: 38,
+      displayName: undefined
+    },
+    {
+      UUID: '140549f8-b533-429a-96eb-6d91ad129199',
+      name: undefined,
+      properties: undefined,
+      gamemode: undefined,
+      ping: 69,
+      displayName: undefined
+    },
+    {
+      UUID: '3e868a07-43c6-4ca2-986c-f6ec703b5fc4',
+      name: undefined,
+      properties: undefined,
+      gamemode: undefined,
+      ping: 121,
+      displayName: undefined
+    },
+    {
+      UUID: 'e92383aa-d13a-4f2d-9074-9fad6a7f16e8',
+      name: undefined,
+      properties: undefined,
+      gamemode: undefined,
+      ping: 37,
+      displayName: undefined
+    },
+    {
+      UUID: '793e9da0-ec06-46aa-a416-e7d9a177a2eb',
+      name: undefined,
+      properties: undefined,
+      gamemode: undefined,
+      ping: 31,
+      displayName: undefined
+    },
+    {
+      UUID: '495aa422-0255-410a-bf25-b6233c674778',
+      name: undefined,
+      properties: undefined,
+      gamemode: undefined,
+      ping: 109,
+      displayName: undefined
+    },
+    {
+      UUID: 'a9dce529-6b1f-43f8-bd4a-e02d6082693d',
+      name: undefined,
+      properties: undefined,
+      gamemode: undefined,
+      ping: 213,
+      displayName: undefined
+    },
+    {
+      UUID: 'c1e92756-5936-4fbe-b9dd-3093930eda94',
+      name: undefined,
+      properties: undefined,
+      gamemode: undefined,
+      ping: 210,
+      displayName: undefined
+    },
+    {
+      UUID: 'de9e144c-83fa-48c4-a355-16f5b1f785ea',
+      name: undefined,
+      properties: undefined,
+      gamemode: undefined,
+      ping: 115,
+      displayName: undefined
+    },
+    {
+      UUID: '3be3788d-8015-4248-84b9-7a87f7594ae7',
+      name: undefined,
+      properties: undefined,
+      gamemode: undefined,
+      ping: 149,
+      displayName: undefined
+    },
+    {
+      UUID: '7f848f60-553d-4fdd-b7b9-795071ce133f',
+      name: undefined,
+      properties: undefined,
+      gamemode: undefined,
+      ping: 227,
+      displayName: undefined
+    },
+    {
+      UUID: '524b6ecf-0bfc-4efa-a319-46f3a4816ed8',
+      name: undefined,
+      properties: undefined,
+      gamemode: undefined,
+      ping: 48,
+      displayName: undefined
+    },
+    {
+      UUID: 'c2a5ac53-f540-4751-855a-141c9c549e16',
+      name: undefined,
+      properties: undefined,
+      gamemode: undefined,
+      ping: 25,
+      displayName: undefined
+    },
+    {
+      UUID: '3367b018-5e58-4117-90b0-defbea7b3338',
+      name: undefined,
+      properties: undefined,
+      gamemode: undefined,
+      ping: 112,
+      displayName: undefined
+    },
+    {
+      UUID: '99580cf6-a86d-4491-aa0d-744444bb01ea',
+      name: undefined,
+      properties: undefined,
+      gamemode: undefined,
+      ping: 239,
+      displayName: undefined
+    },
+    {
+      UUID: 'e46739a1-aab1-462d-b567-56cf46cfc4af',
+      name: undefined,
+      properties: undefined,
+      gamemode: undefined,
+      ping: 173,
+      displayName: undefined
+    },
+    {
+      UUID: '5c42fa50-b6fc-4055-b6b4-96547cc4f1f6',
+      name: undefined,
+      properties: undefined,
+      gamemode: undefined,
+      ping: 109,
+      displayName: undefined
+    }
+  ]
+}
+{
+  action: 1,
+  data: [
+    {
+      UUID: 'a815a3ad-f2ef-400d-b971-6570073ee967',
+      name: undefined,
+      properties: undefined,
+      gamemode: 0,
+      ping: undefined,
+      displayName: undefined
+    }
+  ]
+}
+{
+  action: 1,
+  data: [
+    {
+      UUID: 'a815a3ad-f2ef-400d-b971-6570073ee967',
+      name: undefined,
+      properties: undefined,
+      gamemode: 0,
+      ping: undefined,
+      displayName: undefined
+    }
+  ]
+}
+{
+  action: 1,
+  data: [
+    {
+      UUID: 'a815a3ad-f2ef-400d-b971-6570073ee967',
+      name: undefined,
+      properties: undefined,
+      gamemode: 0,
+      ping: undefined,
+      displayName: undefined
+    }
+  ]
+}
+{
+  action: 1,
+  data: [
+    {
+      UUID: 'a815a3ad-f2ef-400d-b971-6570073ee967',
+      name: undefined,
+      properties: undefined,
+      gamemode: 0,
+      ping: undefined,
+      displayName: undefined
+    }
+  ]
+}
+{
+  action: 0,
+  data: [
+    {
+      UUID: 'a815a3ad-f2ef-400d-b971-6570073ee967',
+      name: 'Supplicated',
+      properties: [Array],
+      gamemode: 0,
+      ping: 0,
+      displayName: undefined
+    }
+  ]
+}
+{
+  action: 0,
+  data: [
+    {
+      UUID: 'a815a3ad-f2ef-400d-b971-6570073ee967',
+      name: 'Supplicated',
+      properties: [Array],
+      gamemode: 0,
+      ping: 0,
+      displayName: undefined
+    }
+  ]
+}

@@ -12,7 +12,8 @@ module.exports = {
       if (Object.values(options.players.whitelist).includes(message.author.id) || message.member.roles.cache.has(options.discord_options.developer_role)){
 
         if (options.minecraft_options.bot != null){
-        
+
+          options.vanish.track = false
           botEmbed.setTitle(`✅ Disconnected`)
           .setAuthor(`${message.member.user.tag}`)
           .setThumbnail(message.guild.iconURL())

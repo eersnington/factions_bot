@@ -4,6 +4,8 @@
   "description": "minecraft factions bot by glowstone development",
   "main": "index.js",
   "dependencies": {
+    "amethyste-api": "^1.1.5",
+    "canvacord": "^5.2.3",
     "chalk": "^4.1.1",
     "discord.js": "^12.5.3",
     "figlet": "^1.5.0",
@@ -12,7 +14,6 @@
     "mineflayer-pathfinder": "^1.6.3",
     "mineflayer-tps": "^1.0.1"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

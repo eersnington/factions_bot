@@ -54,7 +54,8 @@ const options = {
   temp_uuid: {},
   commands: {},
   macros: {},
-  playtime:{}
+  playtime:{},
+  vanish: {track: false, count: 0, list: []}
 }
 
 figlet('FACTIONS-BOT', (err, data) =>{
