@@ -2,6 +2,7 @@ const Discord = require("discord.js");
 
 let disc_page_no = 0
 let ingame_page_no = 0
+let fun_page_no = 0
 
 module.exports = {
     name : 'help',
@@ -17,7 +18,8 @@ module.exports = {
             {name: 'Database', value: `Do \`${options.discord_options.prefix}db\` to check database related commands`},
             { name: 'Discord Commands', value: 'Press 🖥️ for list of Discord Commands' },
             { name: 'In-game Commands', value: 'Press 🏛️ for list of In-Game Commands' },
-            { name: 'Cannoning Commands', value: 'Press 💥 for list of Cannoning Commands' }
+            { name: 'Cannoning Commands', value: 'Press 💥 for list of Cannoning Commands' },
+            { name: 'Fun Commands', value: 'Press 🎉 for list of Fun Commands' }
         )
         .setColor(options.color)
 		.setThumbnail(message.guild.iconURL())
@@ -26,11 +28,13 @@ module.exports = {
             await embed.react('🖥️');
             await embed.react('🏛️');
             await embed.react('💥');
+            await embed.react('🎉');
 
-            const filter = (reaction, user) => ['🖥️', '🏛️', '💥'].includes(reaction.emoji.name) && (message.author.id === user.id);
+            const filter = (reaction, user) => ['🖥️', '🏛️', '💥', '🎉'].includes(reaction.emoji.name) && (message.author.id === user.id);
             const collector = embed.createReactionCollector(filter);
 
             collector.on('collect', (reaction, user) => {
+
                 if (reaction.emoji.name === '🖥️'){
                     reaction.users.remove(user.id);
                     discord_embed(message, options.discord_options.prefix, options.color);
@@ -40,6 +44,9 @@ module.exports = {
                 }else if (reaction.emoji.name === '💥'){
                     reaction.users.remove(user.id);
                     cannon_embed(message, options.discord_options.prefix, options.color);
+                } else if (reaction.emoji.name === '🎉'){
+                    reaction.users.remove(user.id);
+                    fun_embed(message, options.discord_options.prefix, options.color);
                 } 
             })
         });
@@ -209,4 +216,60 @@ function cannon_embed(message, prefix, color){
 	.setFooter(`Page 1/1 | ${message.guild.name}`);
 
     message.channel.send(help1);
+}
+
+function fun_embed(message, prefix, color){
+    fun_page_no = 0
+    
+    const help1 = new Discord.MessageEmbed()
+	.setTitle(`🎉 Fun Commands`)
+    .setDescription('\u200B')
+    .addFields(
+        { name: 'kiss', value: `Usage: \`${prefix}kiss <@user>\`\nDescription: *Send someone a kiss*` },
+        { name: 'marry', value: `Usage: \`${prefix}marry <@user>\`\nDescription: *Marry a user*` },
+        { name: 'meme', value: `Usage: \`${prefix}meme\`\nDescription: *Sends you a meme from reddit*` },
+        { name: 'penis', value: `Usage: \`${prefix}penis <@user>\`\nDescription: *Sizes your penis(Warning: Your feelings may get hurt due to accuracy)*` },
+        { name: 'seggs', value: `Usage: \`${prefix}seggs <@user>\`\nDescription: *Commit Sussy Baka*` },
+    )
+    .setColor(color)
+	.setThumbnail(message.guild.iconURL());
+
+    const help2 = new Discord.MessageEmbed()
+	.setTitle(`🎉 Fun Commands`)
+    .setDescription('\u200B')
+    .addFields(
+        { name: 'beautiful', value: `Usage: \`${prefix}beautiful <@user>\`\nDescription: *Generate a picture of you admiring a user*` },
+        { name: 'triggered', value: `Usage: \`${prefix}wasted <@user>\`\nDescription: *Generate a gif a user triggered*` },
+        { name: 'wasted', value: `Usage: \`${prefix}wasted <@user>\`\nDescription: *Generate a picture of a user wasted*` },
+    )
+    .setColor(color)
+	.setThumbnail(message.guild.iconURL());
+
+    let pages = {1: help1, 2: help2};
+    help1.setFooter(`Page 1/${Object.keys(pages).length} | ${message.guild.name}`);
+    help2.setFooter(`Page 2/${Object.keys(pages).length} | ${message.guild.name}`);
+
+    message.channel.send(help1).then(async embed => {
+        await embed.react('⬅️');
+        await embed.react('➡️');
+
+        const filter = (reaction, user) => ['➡️', '⬅️'].includes(reaction.emoji.name) && (message.author.id === user.id);
+        const collector = embed.createReactionCollector(filter);
+
+        collector.on('collect', (reaction, user) => {
+            if (reaction.emoji.name === '➡️'){
+                reaction.users.remove(user.id);
+                if (fun_page_no < Object.keys(pages).length -1){
+                    fun_page_no++;
+                    embed.edit(pages[fun_page_no+1]);
+                }
+            } else if (reaction.emoji.name === '⬅️'){
+                reaction.users.remove(user.id);
+                if (fun_page_no > 0){
+                    fun_page_no--;
+                    embed.edit(pages[fun_page_no+1]);
+                }
+            } 
+        })
+    });;
 }

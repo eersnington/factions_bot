@@ -1,6 +1,6 @@
 {
   "name": "factions-bot",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "description": "minecraft factions bot by glowstone development",
   "main": "index.js",
   "dependencies": {
