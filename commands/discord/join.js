@@ -307,7 +307,8 @@ function main(options, message, client, db) {
     });
 
     bot.on("playerJoined", (player)=>{
-      if (Object.keys(options.players.whitelist).includes(player.username) && Object.keys(options.players.faction).includes(player.username)){
+  
+      if (Object.keys(options.players.whitelist).includes(player.username) || Object.keys(options.players.faction).includes(player.username)){
         console.log(player.username + " has joined!")
         if(!playtime.has(player.username)){
           playtime.add(player.username)
